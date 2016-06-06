@@ -1,1 +1,4 @@
-/home/parallels/Documentos/Learn_PointCloud/build/CMakeFiles/save.dir
+/home/cabama/Documents/Programacion/Learn_PointCloud/build/CMakeFiles/read.dir
+/home/cabama/Documents/Programacion/Learn_PointCloud/build/CMakeFiles/save.dir
+/home/cabama/Documents/Programacion/Learn_PointCloud/build/CMakeFiles/transform.dir
+/home/cabama/Documents/Programacion/Learn_PointCloud/build/CMakeFiles/view.dir

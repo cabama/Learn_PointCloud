@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/parallels/Documentos/Learn_PointCloud/src/save.cpp
+/home/cabama/Documents/Programacion/Learn_PointCloud/src/save.cpp
 iostream
 -
 pcl/io/pcd_io.h

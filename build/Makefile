@@ -39,10 +39,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/parallels/Documentos/Learn_PointCloud
+CMAKE_SOURCE_DIR = /home/cabama/Documents/Programacion/Learn_PointCloud
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/parallels/Documentos/Learn_PointCloud/build
+CMAKE_BINARY_DIR = /home/cabama/Documents/Programacion/Learn_PointCloud/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -69,9 +69,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/parallels/Documentos/Learn_PointCloud/build/CMakeFiles /home/parallels/Documentos/Learn_PointCloud/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/cabama/Documents/Programacion/Learn_PointCloud/build/CMakeFiles /home/cabama/Documents/Programacion/Learn_PointCloud/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/parallels/Documentos/Learn_PointCloud/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/cabama/Documents/Programacion/Learn_PointCloud/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -99,6 +99,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named read
+
+# Build rule for target.
+read: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 read
+.PHONY : read
+
+# fast build rule for target.
+read/fast:
+	$(MAKE) -f CMakeFiles/read.dir/build.make CMakeFiles/read.dir/build
+.PHONY : read/fast
+
+#=============================================================================
 # Target rules for targets named save
 
 # Build rule for target.
@@ -110,6 +123,56 @@ save: cmake_check_build_system
 save/fast:
 	$(MAKE) -f CMakeFiles/save.dir/build.make CMakeFiles/save.dir/build
 .PHONY : save/fast
+
+#=============================================================================
+# Target rules for targets named transform
+
+# Build rule for target.
+transform: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 transform
+.PHONY : transform
+
+# fast build rule for target.
+transform/fast:
+	$(MAKE) -f CMakeFiles/transform.dir/build.make CMakeFiles/transform.dir/build
+.PHONY : transform/fast
+
+#=============================================================================
+# Target rules for targets named view
+
+# Build rule for target.
+view: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 view
+.PHONY : view
+
+# fast build rule for target.
+view/fast:
+	$(MAKE) -f CMakeFiles/view.dir/build.make CMakeFiles/view.dir/build
+.PHONY : view/fast
+
+src/read.o: src/read.cpp.o
+.PHONY : src/read.o
+
+# target to build an object file
+src/read.cpp.o:
+	$(MAKE) -f CMakeFiles/read.dir/build.make CMakeFiles/read.dir/src/read.cpp.o
+.PHONY : src/read.cpp.o
+
+src/read.i: src/read.cpp.i
+.PHONY : src/read.i
+
+# target to preprocess a source file
+src/read.cpp.i:
+	$(MAKE) -f CMakeFiles/read.dir/build.make CMakeFiles/read.dir/src/read.cpp.i
+.PHONY : src/read.cpp.i
+
+src/read.s: src/read.cpp.s
+.PHONY : src/read.s
+
+# target to generate assembly for a file
+src/read.cpp.s:
+	$(MAKE) -f CMakeFiles/read.dir/build.make CMakeFiles/read.dir/src/read.cpp.s
+.PHONY : src/read.cpp.s
 
 src/save.o: src/save.cpp.o
 .PHONY : src/save.o
@@ -135,6 +198,54 @@ src/save.cpp.s:
 	$(MAKE) -f CMakeFiles/save.dir/build.make CMakeFiles/save.dir/src/save.cpp.s
 .PHONY : src/save.cpp.s
 
+src/transform.o: src/transform.cpp.o
+.PHONY : src/transform.o
+
+# target to build an object file
+src/transform.cpp.o:
+	$(MAKE) -f CMakeFiles/transform.dir/build.make CMakeFiles/transform.dir/src/transform.cpp.o
+.PHONY : src/transform.cpp.o
+
+src/transform.i: src/transform.cpp.i
+.PHONY : src/transform.i
+
+# target to preprocess a source file
+src/transform.cpp.i:
+	$(MAKE) -f CMakeFiles/transform.dir/build.make CMakeFiles/transform.dir/src/transform.cpp.i
+.PHONY : src/transform.cpp.i
+
+src/transform.s: src/transform.cpp.s
+.PHONY : src/transform.s
+
+# target to generate assembly for a file
+src/transform.cpp.s:
+	$(MAKE) -f CMakeFiles/transform.dir/build.make CMakeFiles/transform.dir/src/transform.cpp.s
+.PHONY : src/transform.cpp.s
+
+src/view.o: src/view.cpp.o
+.PHONY : src/view.o
+
+# target to build an object file
+src/view.cpp.o:
+	$(MAKE) -f CMakeFiles/view.dir/build.make CMakeFiles/view.dir/src/view.cpp.o
+.PHONY : src/view.cpp.o
+
+src/view.i: src/view.cpp.i
+.PHONY : src/view.i
+
+# target to preprocess a source file
+src/view.cpp.i:
+	$(MAKE) -f CMakeFiles/view.dir/build.make CMakeFiles/view.dir/src/view.cpp.i
+.PHONY : src/view.cpp.i
+
+src/view.s: src/view.cpp.s
+.PHONY : src/view.s
+
+# target to generate assembly for a file
+src/view.cpp.s:
+	$(MAKE) -f CMakeFiles/view.dir/build.make CMakeFiles/view.dir/src/view.cpp.s
+.PHONY : src/view.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -142,11 +253,23 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
+	@echo "... read"
 	@echo "... rebuild_cache"
 	@echo "... save"
+	@echo "... transform"
+	@echo "... view"
+	@echo "... src/read.o"
+	@echo "... src/read.i"
+	@echo "... src/read.s"
 	@echo "... src/save.o"
 	@echo "... src/save.i"
 	@echo "... src/save.s"
+	@echo "... src/transform.o"
+	@echo "... src/transform.i"
+	@echo "... src/transform.s"
+	@echo "... src/view.o"
+	@echo "... src/view.i"
+	@echo "... src/view.s"
 .PHONY : help
 
 

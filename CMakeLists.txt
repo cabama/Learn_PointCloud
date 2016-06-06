@@ -12,5 +12,11 @@ add_definitions(${PCL_DEFINITIONS})
 add_executable (save  src/save.cpp)
 target_link_libraries (save ${PCL_LIBRARIES})
 
-#add_executable (read src/read.cpp)
-#target_link_libraries (read ${PCL_LIBRARIES})
+add_executable (read src/read.cpp)
+target_link_libraries (read ${PCL_LIBRARIES})
+
+add_executable (view src/view.cpp)
+target_link_libraries (view ${PCL_LIBRARIES})
+
+add_executable (transform src/transform.cpp)
+target_link_libraries (transform ${PCL_LIBRARIES})
